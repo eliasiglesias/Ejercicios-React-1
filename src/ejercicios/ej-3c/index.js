@@ -1,9 +1,9 @@
 import React from 'react';
 import Padre from "./Padre";
-const Ejercicio2c = () => {
+const Ejercicio3c = () => {
     return (
         <Padre />
     );
 };
 
-export default Ejercicio2c;
+export default Ejercicio3c;

@@ -23,6 +23,9 @@ const Home = () => {
             <p className="font-weight-bold">
                 Modifica UNICAMENTE los archivos que se encuentran dentro de los directorios de los ejercicios (src/ejercicios/ej-n).
             </p>
+            <p className="font-weight-bold">
+                Para resolver los ejercicios que terminan en "C", el alumno tendrá que resolver el mismo problema que el ejercicio original pero convirtiendolo a componentes de clase. Ejemplo: Ejercicio 1C es igual a Ejercicio 1 pero resolviéndolo con clases.
+            </p>
             <p>Una vez descargado el proyecto por primera vez ejecuta el comando <b>'npm install'</b> dentro del directorio del proyecto para instalar todas las dependencias antes de que inicies.</p>
             <p className="text-left">
                 Ejercicios disponibles:
