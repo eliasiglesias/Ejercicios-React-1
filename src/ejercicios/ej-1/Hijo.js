@@ -1,6 +1,6 @@
 import React from "react";
 
-// HOLA
+// HOLA 2
 
 const Hijo = (props) => {
 	return (
