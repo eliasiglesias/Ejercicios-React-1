@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 /*
 
@@ -9,14 +9,19 @@ https://es.reactjs.org/docs/handling-events.html
 */
 
 const Hijo = (props) => {
-    const lukesMessage = "NOOOOOO!";
-    
-    return (
-        <div className="alert alert-success">
-            <h4>Hijo</h4>
-            <button className="btn btn-info">¡Dar click aquí!</button>
-        </div>
-    );
+	const lukesMessage = "NOOOOOO!";
+
+	return (
+		<div className="alert alert-success">
+			<h4>Hijo</h4>
+			<button
+				className="btn btn-info"
+				onClick={() => props.printCustomText(lukesMessage)}
+			>
+				¡Dar click aquí!
+			</button>
+		</div>
+	);
 };
 
 export default Hijo;
