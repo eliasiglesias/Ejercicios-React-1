@@ -1,10 +1,8 @@
-import React from 'react';
-import Contador from './Contador';
+import React from "react";
+import Contador from "./Contador";
 
 const Ejercicio7 = () => {
-    return (
-        <Contador />
-    );
+	return <Contador />;
 };
 
 export default Ejercicio7;
