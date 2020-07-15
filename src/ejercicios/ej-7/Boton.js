@@ -1,14 +1,16 @@
-import React from 'react';
+import React from "react";
 
-const Boton = () => {
-    
-    const sumaClick = () => {
-        // Ingresa aquí tu código para aumentar el contador
-    }
+const Boton = (props) => {
+	const sumaClick = () => {
+		props.setClicks(props.clicks + 1);
+		// Ingresa aquí tu código para aumentar el contador
+	};
 
-    return (
-        <button className="btn btn-info" onClick={sumaClick}>suma 1</button>
-    );
+	return (
+		<button className="btn btn-info" onClick={sumaClick}>
+			suma 1
+		</button>
+	);
 };
 
 export default Boton;
