@@ -1,7 +1,5 @@
 import React from "react";
 
-// HOLA 2
-
 class Hijo extends React.Component {
 	render() {
 		return (

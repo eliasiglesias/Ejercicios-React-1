@@ -2,10 +2,8 @@ import React from "react";
 import Hijo from "./Hijo";
 
 class Padre extends React.Component {
-	constructor(props) {
-		super(props);
-		this.text = "Hola Mundo";
-	}
+	text = "Hola Mundo";
+
 	render() {
 		return (
 			<div className="alert alert-primary">
