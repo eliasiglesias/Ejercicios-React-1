@@ -27,7 +27,7 @@ const Home = () => {
             <p className="text-left">
                 Ejercicios disponibles:
                 {exData.map(({title, url},i) => 
-                    <li><a href={`/${url}`}>{title}</a></li>
+                    <li key={`key-list-home-${i}`}><a href={`/${url}`}>{title}</a></li>
                 )}
             </p>
         </div>

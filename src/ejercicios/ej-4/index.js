@@ -1,10 +1,9 @@
 import React from 'react';
+import Padre from './Padre';
 
 const Ejercicio4 = () => {
     return (
-        <div>
-            
-        </div>
+        <Padre />
     );
 };
 
