@@ -14,3 +14,6 @@ export { default as Ejercicio5c } from "./ej-5c";
 export { default as Ejercicio6c } from "./ej-6c";
 export { default as Ejercicio7c } from "./ej-7c";
 export { default as Ejercicio8c } from "./ej-8c";
+export { default as Ejercicio9 } from "./ej-9";
+export { default as Ejercicio10 } from "./ej-10";
+export { default as Ejercicio11 } from "./ej-11";
