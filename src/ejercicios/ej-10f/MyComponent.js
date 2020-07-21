@@ -1,21 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { getMyIp } from "./get-ip";
 
-class MyClass extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = { ipAddress: "..." };
-	}
+const MyClass = () => {
+	const [ipAddress, setIpAddress] = useState("...");
 
-	async componentDidMount() {
-		this.setState({ ipAddress: await getMyIp() });
-	}
+	useEffect(() => {
+		async function getIp() {
+			const data = await getMyIp();
+			setIpAddress(data);
+		}
+		getIp();
+	}, [ipAddress]);
 
 	// Intersante lectura relacionada con el manejo de errores con await https://javascript.info/async-await#error-handling
 
-	render() {
-		return <h1>Mi ip es {this.state.ipAddress}</h1>;
-	}
-}
+	return <h1>Mi ip es {ipAddress}</h1>;
+};
 
 export default MyClass;

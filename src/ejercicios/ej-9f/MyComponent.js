@@ -1,20 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { getMyIp } from "./get-ip.js";
 
-class MyClass extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = { ipAddress: ".." };
-	}
+const MyClass = () => {
+	const [ipAddress, setIpAddress] = useState("..");
 
-	async componentDidMount() {
-		const result = await getMyIp();
-		this.setState({ ipAddress: result.ip });
-	}
+	useEffect(() => {
+		async function getIp() {
+			const data = await getMyIp();
+			setIpAddress(data.ip);
+		}
+		getIp();
+	}, [ipAddress]);
 
-	render() {
-		return <h1>Mi ip es {this.state.ipAddress}</h1>;
-	}
-}
+	return <h1>Mi ip es {ipAddress}</h1>;
+};
 
 export default MyClass;
