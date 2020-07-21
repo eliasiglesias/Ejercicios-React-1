@@ -1,10 +1,8 @@
-import React from 'react';
-import MyClass from './MyClass';
+import React from "react";
+import MyClass from "./MyClass";
 
 const Ejercicio9 = () => {
-    return (
-        <MyClass />
-    );
+	return <MyClass />;
 };
 
 export default Ejercicio9;
