@@ -1,11 +1,12 @@
-import React from 'react';
-import ContactData from './ContactData';
+import React from "react";
 
 function Footer(props) {
-  return <div>
-  <ContactData email={props.contactEmail} phone={props.contactPhone} address={props.contactAddress} />
-  <p>My Ecommerce © 2020</p>
-  </div>
+	return (
+		<div>
+			{props.contactData}
+			<p>My Ecommerce © 2020</p>
+		</div>
+	);
 }
 
 export default Footer;

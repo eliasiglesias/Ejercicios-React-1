@@ -18,6 +18,15 @@ const Contadores = (props) => {
 	// ----------  MODIFICA A PARTIR DE ESTE PUNTO -----------------------------
 	// -------------------------------------------------------------------------
 
+	// Implementa un useEffect que simule el método componentDidMount para incluir en history el valor inicial de cada contador
+	// ej. ["Valores iniciales -> Contador-1: 0; Contador-2: 0; Contador-3: 0"]
+
+	useEffect(() => {
+		setHistory([
+			"Valores iniciales -> Contador-1: 0;  Contador-2: 0; Contador-3: 0",
+		]);
+	}, []);
+
 	// Implementa un useEffect para cada uno de los contadores que detecte los cambios de estado de forma individual
 	// y almacene en history el cambio del contador
 	// Ej. ["Contador-1: 2 -> 3; Contador-2: sin cambios ; Contador-3: sin cambios"]
@@ -25,7 +34,7 @@ const Contadores = (props) => {
 
 	// useEffect CONTADOR 1
 	useEffect(() => {
-		if (prevCount1 !== count1) {
+		if (prevCount1 !== undefined) {
 			const result = `Contador-1: ${prevCount1} -> ${count1}; Contador-2: sin cambios ; Contador-3: sin cambios`;
 			setHistory([...history, result]);
 		}
@@ -33,7 +42,7 @@ const Contadores = (props) => {
 
 	// useEffect CONTADOR 2
 	useEffect(() => {
-		if (prevCount2 !== count2) {
+		if (prevCount2 !== undefined) {
 			const result = `Contador-1: sin cambios; Contador-2:  ${prevCount2} -> ${count2} ; Contador-3: sin cambios`;
 			setHistory([...history, result]);
 		}
@@ -41,7 +50,7 @@ const Contadores = (props) => {
 
 	// useEffect CONTADOR 3
 	useEffect(() => {
-		if (prevCount3 !== count3) {
+		if (prevCount3 !== undefined) {
 			const result = `Contador-1: sin cambios; Contador-2: sin cambios; Contador-3: ${prevCount3} -> ${count3}`;
 			setHistory([...history, result]);
 		}
@@ -68,15 +77,6 @@ const Contadores = (props) => {
 	useEffect(() => {
 		setCount3(props.count3);
 	}, [props.count3]);
-
-	// Implementa un useEffect que simule el método componentDidMount para incluir en history el valor inicial de cada contador
-	// ej. ["Valores iniciales -> Contador-1: 0; Contador-2: 0; Contador-3: 0"]
-
-	useEffect(() => {
-		setHistory([
-			"Valores iniciales -> Contador-1: 0;  Contador-2: 0; Contador-3: 0",
-		]);
-	}, []);
 
 	// -------------------------------------------------------------------------
 	// ---------- AQUÍ TERMINA EL BLOQUE QUE PUEDES MODIFICAR ------------------
