@@ -14,7 +14,7 @@ const PostsGrid = (props) => {
 
 	useEffect(() => {
 		props.changeSelectedPost(selectedPost);
-	}, [selectedPost]);
+	}, [selectedPost, props]);
 
 	useEffect(() => {
 		async function getApi() {
